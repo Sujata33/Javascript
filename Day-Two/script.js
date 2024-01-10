@@ -20,6 +20,11 @@ let scor = 70;
 const res = scor >= 80 ? "Excellent 👍" : scor > 70 ? "Good 😢" : "Sorry 😃";
 console.log(res);
 
+
+
+
+                    // Function With chatGpt/////
+                    
 /*// Function declaration without parameters
 function greet() {
     console.log("Hello, world!");
