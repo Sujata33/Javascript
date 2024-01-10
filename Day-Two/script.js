@@ -1,4 +1,25 @@
-                        //**DAY TWO**//
+                        //**DAY TWO With Mona**//
+
+//Logical operator with conditional statement
+if(3===3 && 4>2){
+    console.log("True");
+}else{
+    console.log("false");
+}
+//ternary operator
+//==>condition ? iftrue : iffalse;
+//==>const a = condition ? iftrue : iffalse;
+let score = 80;
+
+score >= 80 ? console.log("Excellent") : console.log("Good");
+
+const result = score >= 80 ? "Excellent" : "Good";
+console.log(result);
+
+let scor = 70;
+const res = scor >= 80 ? "Excellent 👍" : scor > 70 ? "Good 😢" : "Sorry 😃";
+console.log(res);
+
 /*// Function declaration without parameters
 function greet() {
     console.log("Hello, world!");
