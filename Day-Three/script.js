@@ -34,3 +34,6 @@ console.log(num.toFixed(3));
 const str2 = ss.toString();
 console.log(str2);//toString() don't pass argument in this method
 console.log(typeof str2);
+
+console.log(3+5+"2" + 6); //concatinate
+console.log("9" - 3);// type conversion
