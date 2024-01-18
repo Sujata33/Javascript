@@ -104,8 +104,8 @@ const b = parseFloat("9.8");
 const check2 = b === 10 ? true : false;
 console.log(check2);//return false
 //Make it equal
-// const check3 = Math.ceil(b) === 10 ? true : false;
-// console.log(check2); Hoche na
+const check3 = Math.ceil(b) === 10 ? true : false;
+console.log(check3);
 
 //5.
 const check4 = "python".search("on") && "jargon".search("on") ? true : false;
@@ -126,16 +126,18 @@ const ran2 = Math.floor(Math.random() * (255 - 0 + 1) + 0);
 console.log(ran2);
 
 //10.
+const string = "JavaScript";
+console.log(string.charAt(Math.floor(Math.random() * string.length)));
 
 //11.
 console.log("1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125");
 
 //12.hoche na
 const sentence1 = "You cannot end a sentence with because because because is a conjunction";
+const sen1 = sentence1.substring(sentence1.indexOf("because"), sentence1.lastIndexOf("is"));
+console.log(sen1);
 
-console.log(sentence1);
-
-////// Level 3///
+////// Level 3 /////
 
 //1.
 const sentence2 = "Love is the best thing in this world. Some found their love and some are still looking for their love.";
@@ -146,4 +148,15 @@ console.log(sentence1.match(/because/g));
 
 //3.
 const sentence3 = "%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching";
-console.log(sentence3.replace(/@/g, ""));
+console.log(sentence3.replace(/[!@#$%&;?]/g, ""));
+
+//4.
+const income = "He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.";
+
+const incomeArray = income.split(" ");
+const salary = incomeArray[incomeArray.indexOf("5000")];
+const bonus = incomeArray[incomeArray.indexOf("10000")];
+const onlineCrs = incomeArray[incomeArray.indexOf("15000")];
+
+const totalIncome = `Total Annual Income is = ${+salary * 12 + +bonus + +onlineCrs * 12} euro`;
+console.log(totalIncome);
