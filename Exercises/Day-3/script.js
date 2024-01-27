@@ -74,3 +74,40 @@ console.log(4 != '4');
 console.log(4 == '4');
 //xi.
 console.log(4 === '4');
+//xii.
+console.log("python".length !== "jargon".length);
+
+//6.
+//i.
+console.log(4 > 3 && 10 < 12);
+
+//7.
+const isToday = new Date();
+
+//i.
+const year = `This is ${isToday.getFullYear()}`;
+console.log(year);
+
+//ii.
+const month = `This is month ${isToday.getMonth()} today as a number`;
+console.log(month);
+
+//iii.
+const date = `This is ${isToday.getDate()}`;
+console.log(date);
+
+//iv.
+const day = `This is day ${isToday.getDay()} today as a number`;
+console.log(day);
+
+//v.
+const hr = `The hours is ${isToday.getHours()} now`;
+console.log(hr);
+
+//vi.
+const min = `The minutes is ${isToday.getMinutes()} now`;
+console.log(min);
+
+//vii.
+const seconds = `The numbers of seconds elapsed from 1 January 1970 to now is ${isToday.getTime() / 1000}`;
+console.log(seconds);
