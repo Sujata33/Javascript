@@ -1,5 +1,5 @@
 ////Level 1///
-
+/*
 //1.
 const firstName = "Sujata";
 const lastName = "Ghosh";
@@ -110,4 +110,18 @@ console.log(min);
 
 //vii.
 const seconds = `The numbers of seconds elapsed from 1 January 1970 to now is ${isToday.getTime() / 1000}`;
-console.log(seconds);
+console.log(seconds);*/
+
+////Level 2///
+
+//1.
+const base = prompt("enter base:");
+const height = prompt("enter height:");
+const area = 0.5 * base * height;
+console.log("Enter base: " + base);
+console.log("Enter height: " + height);
+console.log("Enter area: " + area);
+
+//2.
+const a = prompt("Enter side a");
+const b = prompt("Enter ")
