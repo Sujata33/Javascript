@@ -114,14 +114,32 @@ console.log(seconds);*/
 
 ////Level 2///
 
-//1.
-const base = prompt("enter base:");
-const height = prompt("enter height:");
+/*//1.
+const base = parseInt(prompt("enter base:"));
+// base = parseInt(base);
+// console.log(typeof b1);
+const height = parseInt(prompt("enter height:"));
 const area = 0.5 * base * height;
-console.log("Enter base: " + base);
-console.log("Enter height: " + height);
-console.log("Enter area: " + area);
+// console.log("Enter base: " + base + "\nEnter height: " + height + "\nEnter area: "+ area);
+console.log(`Enter base: ${base}\nEnter height: ${height}\nEnter area: ${area}`);
+// console.log("Enter base: " + base);
+// console.log("Enter height: " + height);
+// console.log("Enter area: " + area);
 
 //2.
-const a = prompt("Enter side a");
-const b = prompt("Enter ")
+const a = parseInt(prompt("Enter side a"));
+const b = parseInt(prompt("Enter side b"));
+const c = parseInt(prompt("Enter side c"));
+const peri = a + b + c;
+console.log(`Enter side a: ${a}\nEnter side b: ${b}\nEnter side c: ${c}\nThe perimeter of the triangle is ${peri}`);
+//3.
+const len = parseInt(prompt("Enter length"));
+const width = parseInt(prompt("Enter width "));
+const area1 = len * width;
+const peri1 = 2 * (len + width);
+console.log(`Enter length: ${len}\nEnter width: ${width}\nArea of rectangle ${area1} and the Perimeter of rectangle ${peri1}`);*/
+//4.
+const r = parseInt(prompt("Enter radius"));
+const area2 = Math.PI * r * r;
+const circum = 2 * Math.PI * r;
+console.log(`Enter radius: ${r}\nArea of circle is ${area2}\nCircumference of circle is ${circum}`);
