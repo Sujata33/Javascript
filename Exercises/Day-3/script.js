@@ -169,8 +169,10 @@ if (name.length >= 7) {
 //11.
 let firstName = prompt("Enter Your First Name");
 let lastName = prompt("Enter Your Family Name");
-if (firstName >= lastName) {
+if (firstName.length > lastName.length) {
     console.log(`Your first name, ${firstName} is longer than your family name, ${lastName}`);
+} else if (firstName.length === lastName.length) {
+    console.log(`Your first name, ${firstName} is equal to your family name, ${lastName}`);
 } else {
     console.log(`Your first name, ${firstName} is smaller than your family name, ${lastName}`);
 }
@@ -181,7 +183,7 @@ let yourAge = parseInt(prompt("Enter Your Age"));
 if (myAge > yourAge) {
     console.log(`I am ${myAge - yourAge} years older than you.`);
 } else {
-    console.log(`I am ${yourAge - myAge} years smaller than you.`);
+    console.log(`I am ${yourAge - myAge} years younger than you.`);
 }
 
 //13.
@@ -192,4 +194,32 @@ if (totalAge >= 18) {
     console.log(`You are ${totalAge} You are old enough to drive.`);
 } else {
     console.log(`You are ${totalAge} You will be allowed to drive after ${18 - totalAge} years.`);
-}*/
+}
+
+//14.
+const year = parseInt(prompt("Enter number of years you live"));
+const sec = year * 365 * 24 * 3600;
+console.log(`Enter number of years you live: ${year}\nYou lived ${sec} seconds`);
+
+
+///Level 3///
+//1.
+const year = new Date().getFullYear();
+let month = new Date().getMonth() + 1;
+let date = new Date().getDate();
+let hour = new Date().getHours();
+let minutes = new Date().getMinutes();
+if (month < 10) {
+    month = '0' + month
+}
+if (date < 10) {
+    date = '0' + date
+}
+if (hour < 10) {
+    hour = '0' + hour
+}
+if (minutes < 10) {
+    minutes = '0' + minutes
+}
+console.log(`${year}-${month}-${date} ${hour}:${minutes}`);
+*/
