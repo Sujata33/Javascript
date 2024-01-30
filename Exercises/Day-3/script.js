@@ -201,7 +201,7 @@ const year = parseInt(prompt("Enter number of years you live"));
 const sec = year * 365 * 24 * 3600;
 console.log(`Enter number of years you live: ${year}\nYou lived ${sec} seconds`);
 
-
+*/
 ///Level 3///
 //1.
 const year = new Date().getFullYear();
@@ -209,17 +209,21 @@ let month = new Date().getMonth() + 1;
 let date = new Date().getDate();
 let hour = new Date().getHours();
 let minutes = new Date().getMinutes();
-if (month < 10) {
-    month = '0' + month
-}
-if (date < 10) {
-    date = '0' + date
-}
-if (hour < 10) {
-    hour = '0' + hour
-}
-if (minutes < 10) {
-    minutes = '0' + minutes
-}
+// if (month < 10) {
+//     month = '0' + month
+// }
+// if (date < 10) {
+//     date = '0' + date
+// }
+// if (hour < 10) {
+//     hour = '0' + hour
+// }
+// if (minutes < 10) {
+//     minutes = '0' + minutes
+// }
+
+month = String(month).padStart(2, '0');
+date = String(date).padStart(2, '0');
+hour = String(hour).padStart(2, '0');
+minutes = String(minutes).padStart(2, '0');
 console.log(`${year}-${month}-${date} ${hour}:${minutes}`);
-*/
