@@ -137,9 +137,59 @@ const len = parseInt(prompt("Enter length"));
 const width = parseInt(prompt("Enter width "));
 const area1 = len * width;
 const peri1 = 2 * (len + width);
-console.log(`Enter length: ${len}\nEnter width: ${width}\nArea of rectangle ${area1} and the Perimeter of rectangle ${peri1}`);*/
+console.log(`Enter length: ${len}\nEnter width: ${width}\nArea of rectangle ${area1} and the Perimeter of rectangle ${peri1}`);
 //4.
 const r = parseInt(prompt("Enter radius"));
 const area2 = Math.PI * r * r;
 const circum = 2 * Math.PI * r;
 console.log(`Enter radius: ${r}\nArea of circle is ${area2}\nCircumference of circle is ${circum}`);
+
+//5.
+
+//6.
+
+//7.
+
+//8.
+
+//9.
+const hr = parseInt(prompt("Enter hours"));
+const rate = parseInt(prompt("Enter rate per hour"));
+const earn = hr * rate;
+console.log(`Enter Hours: ${hr}\nEnter rate per hour: ${rate}\nYour weekly earning is ${earn}`);
+
+//10.
+const name = prompt("Enter Your Name");
+if (name.length >= 7) {
+    console.log("your name is long.");
+} else {
+    console.log("your name is short.");
+}
+
+//11.
+let firstName = prompt("Enter Your First Name");
+let lastName = prompt("Enter Your Family Name");
+if (firstName >= lastName) {
+    console.log(`Your first name, ${firstName} is longer than your family name, ${lastName}`);
+} else {
+    console.log(`Your first name, ${firstName} is smaller than your family name, ${lastName}`);
+}
+
+//12.
+let myAge = parseInt(prompt("Enter My Age"));
+let yourAge = parseInt(prompt("Enter Your Age"));
+if (myAge > yourAge) {
+    console.log(`I am ${myAge - yourAge} years older than you.`);
+} else {
+    console.log(`I am ${yourAge - myAge} years smaller than you.`);
+}
+
+//13.
+const birth = parseInt(prompt("Enter birth year"));
+const age = new Date().getFullYear();
+const totalAge = age - birth;
+if (totalAge >= 18) {
+    console.log(`You are ${totalAge} You are old enough to drive.`);
+} else {
+    console.log(`You are ${totalAge} You will be allowed to drive after ${18 - totalAge} years.`);
+}*/
