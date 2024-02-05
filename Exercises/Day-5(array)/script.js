@@ -50,29 +50,78 @@ const lastCom = itCompanies[itCompanies.length - 1];
 console.log("Last item of itCompanies is", lastCom);
 
 //10.
-const allItem = itCompanies.join(", ");
-console.log(allItem);
+
+console.log(itCompanies[0]);
+console.log(itCompanies[1]);
+console.log(itCompanies[2]);
+console.log(itCompanies[3]);
+console.log(itCompanies[4]);
+console.log(itCompanies[5]);
+console.log(itCompanies[6]);
 
 //11.
+console.log(itCompanies[0].toUpperCase());
+console.log(itCompanies[1].toUpperCase());
+console.log(itCompanies[2].toUpperCase());
+console.log(itCompanies[3].toUpperCase());
+console.log(itCompanies[4].toUpperCase());
+console.log(itCompanies[5].toUpperCase());
+console.log(itCompanies[6].toUpperCase());
 
 //12.
-console.log(itCompanies.join(" "));
+const arr4 = itCompanies.slice(0, itCompanies.length - 1)
+console.log(arr4.join(", "));
+console.log(`${arr4.join(", ")} and ${itCompanies[itCompanies.length - 1]} are a big IT companies.`);
+
+const suju = ["as", "is", 5, 6, "it"];
+console.log(suju.toString());
+console.log(`${suju}`);
 
 //13.
-
+if (itCompanies.includes("NIC")) {
+    console.log("NIC");
+} else {
+    console.log("Company is not found");
+}
 
 //14.
+const ami = "tumi";
+
+// if () {
+
+// }
 
 //15.
-console.log(itCompanies.sort());
+// console.log(itCompanies.sort());
 
 //16.
-console.log(itCompanies.reverse());
+// console.log(itCompanies.reverse());
 
 //17.
 console.log(itCompanies.slice(0, 3));
+console.log(itCompanies.slice(3));
 
 //18.
+const lastThree = itCompanies.length - 3;
+console.log(typeof lastThree);
+console.log(itCompanies.slice(lastThree, itCompanies.length));
+console.log(itCompanies.slice(lastThree));
 
 //19.
 console.log(itCompanies.slice(Math.floor(num / 2)));
+
+//20.
+// console.log(itCompanies.shift());
+
+//21.
+const mItem = Math.floor(itCompanies.length / 2);
+console.log(itCompanies.splice(mItem, 1));
+console.log(itCompanies);
+
+//22.
+// console.log(itCompanies.pop());
+console.log(itCompanies);
+
+//23.
+const emptyArr = itCompanies.splice(0, itCompanies.length)
+console.log(itCompanies);
