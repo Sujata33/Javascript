@@ -52,3 +52,27 @@ console.log("Last item of itCompanies is", lastCom);
 //10.
 const allItem = itCompanies.join(", ");
 console.log(allItem);
+
+//11.
+
+//12.
+console.log(itCompanies.join(" "));
+
+//13.
+
+
+//14.
+
+//15.
+console.log(itCompanies.sort());
+
+//16.
+console.log(itCompanies.reverse());
+
+//17.
+console.log(itCompanies.slice(0, 3));
+
+//18.
+
+//19.
+console.log(itCompanies.slice(Math.floor(num / 2)));
