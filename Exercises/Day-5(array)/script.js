@@ -128,7 +128,7 @@ console.log(itCompanies);
 */
 
 /////Level 2////
-
+/*
 //1.
 console.log(webTechs);
 console.log(countries);
@@ -143,5 +143,100 @@ console.log(textRem);
 const array = textRem.split(" ");
 console.log(array);
 
-console.log("Number of words are", array.length);
+console.log("Number of words are", array.length);*/
 
+//3.
+const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+
+//i.
+shoppingCart.unshift("Meet");
+console.log(shoppingCart);
+
+//ii.
+shoppingCart.push("Sugar");
+console.log(shoppingCart);
+
+//iii.
+shoppingCart.splice(shoppingCart.indexOf("Honey"), 1);
+console.log(shoppingCart);
+
+//iv.
+shoppingCart.splice(shoppingCart.indexOf("Tea"), 1, "Green Tea");
+console.log(shoppingCart);
+
+//4.
+
+if (countries.indexOf("Ethiopia") !== -1) {
+    console.log("ETHIOPIA");
+} else {
+    countries.push("Ethiopia");
+    console.log(countries);
+}
+
+//5.
+
+if (webTechs.includes("Sass")) {
+    console.log('Sass is a CSS preprocess');
+} else {
+    webTechs.push("Sass");
+    console.log(webTechs);
+}
+
+//6.
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node', 'Express', 'MongoDB']
+
+const fullStack = frontEnd.concat(backEnd);
+
+console.log(fullStack);
+
+//level 3///
+
+//1.
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+//i.
+console.log(ages.sort());
+
+
+const max = ages[ages.length - 1];
+console.log(`Maximum age in the array is ${max}`);
+
+const min = ages[0];
+console.log(`Maximum age in the array is ${min}`);
+
+//iii.
+const sum = ages[0] + ages[1] + ages[2] + ages[3] + ages[4] + ages[5] + ages[6] + ages[7] + ages[8] + ages[9];
+
+const avg = sum / ages.length;
+
+console.log(`The average age is ${avg}`);
+
+//iv.
+console.log(`Range of the ages ${max - min}`);
+
+//v.
+console.log(Math.abs(min - avg) === Math.abs(max - avg));
+
+//2.
+const firstTenCountries = countries.slice(0, 10);
+console.log(firstTenCountries);
+
+//3.
+console.log(`Middle country is ${countries[Math.floor(countries.length / 2) - 1]}`);
+
+//4.
+let firstHalf, secondHalf;
+const index = countries.length / 2;
+if (countries.length % 2 === 0) {
+
+    firstHalf = countries.slice(0, index);
+    secondHalf = countries.slice(index, countries.length);
+    console.log(firstHalf.length);
+    console.log(secondHalf.length);
+} else {
+    firstHalf = countries.slice(0, index + 1);
+    secondHalf = countries.slice(index + 1, countries.length);
+    console.log(firstHalf.length);
+    console.log(secondHalf.length);
+}
