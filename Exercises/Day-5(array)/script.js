@@ -1,5 +1,5 @@
 ///level 1///
-
+/*
 //1.
 const emptyArray = [];
 
@@ -125,3 +125,23 @@ console.log(itCompanies);
 //23.
 const emptyArr = itCompanies.splice(0, itCompanies.length)
 console.log(itCompanies);
+*/
+
+/////Level 2////
+
+//1.
+console.log(webTechs);
+console.log(countries);
+
+//2.
+let text = "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+
+const pucntuation = text.match(/[,.]/g);
+console.log(pucntuation);
+const textRem = text.replaceAll(/[,.]/g, "");
+console.log(textRem);
+const array = textRem.split(" ");
+console.log(array);
+
+console.log("Number of words are", array.length);
+
