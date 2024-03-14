@@ -1,0 +1,103 @@
+// ARRAYS ////
+
+const array = ['a', 'b', 2, 7, true, false, undefined, null, { prop: 'value' }];
+
+// Array constructor: Array(n)
+const emptyArr = Array(8);
+console.log(emptyArr);
+
+// fill()
+emptyArr.fill(143);
+console.log(emptyArr);
+
+// concat()
+const arr1 = [1, 2, 3, true];
+const arr2 = [4, 5, 6];
+const arr3 = [7, 8, 9, 10];
+console.log(arr1.concat(arr2, arr3));
+
+// length: length of an array(number of items).
+console.log(arr1.length);
+
+// indexOf(): Check if an item exist in the array. If the item exist in the array returns index number else returns - 1;
+
+console.log(arr1.indexOf(2));
+console.log(arr1.indexOf(200));
+
+// => 
+const fruits = ['apple', 'banana', 'mango', 'orange'];
+let index = fruits.indexOf('apple');
+
+if (index !== -1) {
+    console.log('This fruit is available');
+} else {
+    console.log('Go to other store please! 🥺');
+};
+
+// lastIndexOf();
+// includes;
+
+// isArray(); Check if the data type is an array.
+const string = 'Sushovan';
+console.log(Array.isArray(fruits));
+console.log(Array.isArray(string));
+
+// toString(): Coverts array into string
+const fullName = ['Sushovan', 'Ghosh'];
+console.log(fullName.toString());
+
+
+
+// join, splice, slice, push, pop, shift, unshift, reverse, sort;
+const fruits = ['apple', 'banana', 'mango', 'orange'];
+
+// join(): Joins an array by the specified character.
+console.log(fruits.join(', '));
+
+const string = 'I am learning JavaScript.';
+console.log(string.split(' ').join(' '));
+
+// slice(): Extracts a portion of an array and returns that extracted portion. Does NOT modify/mutate the original array.
+// Takes two arguments first index and end index, but doesn't include the end index.
+// Generally used to make a copy of an array.
+
+const someFruits = fruits.slice(0, 2);
+const copyFruits = fruits.slice(0);
+
+console.log(someFruits);
+console.log('Original', fruits);
+console.log('Copy', copyFruits);
+
+// splice(): Removes one/more-than-one element/elements from an array based on the specified index. Returns the removed item. DOES mutates/modifies the orignal array
+// Takes two arguments: item index, number of items to be reomoved from the array
+// Takes third option argument and repace it with the removed item.
+copyFruits.splice(1, 1);
+copyFruits.splice(0, 2, 'pineapple', 'guava')
+console.log(copyFruits);
+
+const fruits = ['apple', 'banana', 'mango', 'orange'];
+
+// pop(): Pops-out/removes the last item from an array;
+fruits.pop();
+console.log(fruits);
+
+// push(): Takes an argument and push it at the end of an array;
+fruits.push('pineapple', 'date');
+console.log(fruits);
+
+// shift(): Removes the first item of an array;
+fruits.shift();
+console.log(fruits);
+
+// unshift(): Adds an item at the beginning of an array;
+fruits.unshift('jackfruit');
+console.log(fruits);
+
+// reverse(): Reverse an array;
+console.log(fruits.reverse());
+
+// sort(): Sorts an array, based on the ASCII value of the item of an array.
+console.log(fruits.sort());
+
+let numArray = [1, 2, 10, 19, 20, 120, 200, 29, 30, 220, -1];
+console.log(numArray.sort());

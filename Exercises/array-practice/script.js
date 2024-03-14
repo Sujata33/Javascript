@@ -55,4 +55,64 @@ for (let i = 0; i < itCompanies.length; i++) {
 }
 
 console.log(`${itCompanies.slice(0, itCompanies.length - 1).join(", ")} and ${itCompanies.slice(itCompanies.length - 1).join("")} are big IT companies.`);
+if (itCompanies.includes("Amazon")) {
 
+
+    console.log("Amazon");
+} else {
+    console.log("not found");
+}
+
+console.log(itCompanies.sort());
+console.log(itCompanies.reverse());
+console.log(itCompanies.slice(0, 3));
+console.log(itCompanies.slice(itCompanies.length - 3, itCompanies.length));
+console.log(itCompanies.slice(itCompanies.length - 3));
+
+
+// itCompanies.shift();
+console.log(itCompanies);
+
+// itCompanies.splice(Math.round(itCompanies.length / 2) - 1, 1)
+
+console.log(itCompanies);
+
+// itCompanies.pop();
+console.log(itCompanies);
+
+itCompanies.splice(0, itCompanies.length);
+console.log(itCompanies);
+
+
+let text =
+    'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.';
+const abc = text.replaceAll(/[,.]/g, "");
+console.log(abc);
+console.log(abc.split(" "));
+
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+
+shoppingCart.unshift("Meat");
+
+shoppingCart.push("Sugar");
+
+shoppingCart.splice(shoppingCart.indexOf("Honey"), 1);
+
+shoppingCart.splice(shoppingCart.indexOf("Tea"), 1, "Green Tea");
+
+console.log(shoppingCart);
+
+
+if (countries.includes("Ethiopia")) {
+    console.log("ETHIOPIA");
+} else {
+    countries.push("Ethiopia");
+    console.log(countries);
+}
+
+if (webTechs.includes("Sass")) {
+    console.log("Sass is a CSS preprocess");
+} else {
+    webTechs.push("Sass");
+    console.log(webTechs);
+}
