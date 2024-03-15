@@ -116,3 +116,44 @@ if (webTechs.includes("Sass")) {
     webTechs.push("Sass");
     console.log(webTechs);
 }
+
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node', 'Express', 'MongoDB']
+
+const fullStack = frontEnd.concat(backEnd);
+
+console.log(fullStack)
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+console.log(ages.sort());
+
+console.log(`Maximum number is ${ages[ages.length - 1]}\nMinimum number is ${ages[0]}`);
+
+let sum = 0;
+for (let i = 0; i < ages.length; i++) {
+    sum = sum + ages[i];
+}
+
+console.log("sum = " + sum);
+console.log(`Average is ${sum / ages.length}`);
+
+console.log(`Range of the ages ${ages[ages.length - 1] - ages[0]}`);
+
+console.log(Math.abs(ages[0] - sum / ages.length) === Math.abs(ages[ages.length - 1] - sum / ages.length));
+
+console.log(countries.slice(0, 10));
+
+console.log(countries[Math.round(countries.length / 2) - 1]);
+const index = countries.length / 2;
+let firstHalf, secondHalf;
+if (countries.length % 2 === 0) {
+    firstHalf = countries.slice(0, index);
+    secondHalf = countries.slice(index + 1, countries.length);
+    console.log(firstHalf.length);
+    console.log(secondHalf.length);
+} else {
+    console.log();
+}
+
+

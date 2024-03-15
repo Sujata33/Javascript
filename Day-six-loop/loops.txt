@@ -1,0 +1,61 @@
+// Loops
+
+// for loop
+for (let i = 0; i < 5; i++) {
+    console.log(i + 1);
+}
+
+// while loop
+let i = 0;
+while (i < 5) {
+    console.log(`While ${i + 1}`);
+    i++;
+}
+
+// do...while loop
+let index = 0
+do {
+    console.log(`Do ${index + 1}`);
+    index++;
+} while (index < 5);
+
+const arr = [1, 2, 3, 4, 5, 6];
+const fruits = ['banana', 'orange', 'mango', 'pineapple', 'apple'];
+
+console.time('For loop');
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+};
+console.timeEnd('For loop');
+
+// for...of loop
+/**
+ * for (let/const item of array) {
+ *  console.log(item);
+ * }
+ */
+console.time('for of loop')
+for (const fruit of fruits) {
+    console.log(fruit);
+}
+console.timeEnd('for of loop');
+
+// break;
+// for (let i = 0; i < 5; i++) {
+//     if (i === 3) break;
+//     console.log(i);
+// }
+
+// // continue;
+
+// for (let i = 0; i < 5; i++) {
+//     if (i === 2) continue;
+//     console.log(i);
+// }
+
+// const arr2 = [1, 2, 3, 4, 5, 6];
+// let sum = 0;
+// for (let num of arr2) {
+//     sum += num;
+//     console.log(sum);
+// }
