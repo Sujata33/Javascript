@@ -44,3 +44,90 @@ for (let i = 0; i <= 100; i++) {
 console.log(`The sum of all evens from 0 to 100 is ${sumsev}. And the sum of all odds from 0 to 100 is ${sumsod}.`);
 const arr = [sumsev, sumsod];
 console.log(arr);
+
+const random_arr = [];
+for (let i = 0; i < 5; i++) {
+    let ran = Math.floor(Math.random() * 10) + 1;
+    random_arr.push(ran);
+}
+console.log(random_arr);
+
+const uniqueRanArr = [];
+for (let i = 5; uniqueRanArr.length < i;) {
+    let unique_ran = Math.floor(Math.random() * 10) + 1;
+    if (uniqueRanArr.includes(unique_ran) === false) {
+        uniqueRanArr.push(unique_ran);
+    }
+}
+console.log(uniqueRanArr);
+
+let ranString = "abcdefghijklmnopqrstuvwxyz0123456789";
+let idStr = "";
+for (let i = 0; i < 6; i++) {
+    let charRan = Math.floor(Math.random() * ranString.length);
+    ranString[charRan];
+    idStr = idStr + ranString[charRan];
+}
+console.log(idStr);
+
+
+let ranStr = "abcdef0123456789";
+let idString = "#";
+// let a = parseInt(prompt("Enter a number"));
+
+for (let i = 0; i < 6; i++) {
+    let ranany = Math.floor(Math.random() * ranStr.length);
+    idString = idString + ranStr[ranany];
+
+}
+
+
+console.log(idString);
+
+
+let ranRgb1 = Math.floor(Math.random() * 255);
+let ranRgb2 = Math.floor(Math.random() * 255);
+let ranRgb3 = Math.floor(Math.random() * 255);
+console.log(`rgb(${ranRgb1},${ranRgb2},${ranRgb3})`);
+
+// document.body.style.backgroundColor = `rgb(${ranRgb1},${ranRgb2},${ranRgb3})`;
+document.body.style.backgroundColor = idString;
+
+const countries = [
+    'Albania',
+    'Bolivia',
+    'Canada',
+    'Denmark',
+    'Ethiopia',
+    'Finland',
+    'Germany',
+    'Hungary',
+    'Ireland',
+    'Japan',
+    'Kenya'
+]
+
+const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+]
+
+const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+
+const countriesUpper = [];
+
+for (let i = 0; i < countries.length; i++) {
+    countriesUpper.push(countries[i].toUpperCase());
+}
+console.log(countriesUpper);
+
+const lenCountries = [];
+for (let country of countries) {
+    lenCountries.push(country.length);
+}
+console.log(lenCountries);
