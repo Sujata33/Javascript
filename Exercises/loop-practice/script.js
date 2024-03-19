@@ -117,6 +117,8 @@ const webTechs = [
     'MongoDB'
 ]
 
+const debTechs = webTechs.slice(0);
+
 const mernStack = ['MongoDB', 'Express', 'React', 'Node']
 
 const countriesUpper = [];
@@ -131,3 +133,45 @@ for (let country of countries) {
     lenCountries.push(country.length);
 }
 console.log(lenCountries);
+
+const arrayCountries = [];
+for (let country of countries) {
+    arrayCountries.push([country, country.slice(0, 3).toUpperCase(), country.length]);
+}
+console.log(arrayCountries);
+
+const countryLand = ['Finland', 'Ireland', 'Iceland'];
+const landCountry = [];
+const landCountry2 = [];
+for (let country of countryLand) {
+    if (country.includes("land")) {
+        landCountry.push(country);
+    } else {
+        landCountry2.push(country);
+    }
+}
+console.log(landCountry);
+console.log(landCountry2);
+const max = countries[0];
+for (let country of countries) {
+    if (max.length < country.length) {
+        console.log(country);
+    }
+}
+
+const fiveChar = [];
+for (let country of countries) {
+    if (country.length === 5) {
+        fiveChar.push(country);
+    }
+}
+
+console.log(fiveChar);
+
+console.log(webTechs);
+const longest = debTechs[0];
+for (let company of debTechs) {
+    if (longest.length < company.length) {
+        console.log(company);
+    }
+}
