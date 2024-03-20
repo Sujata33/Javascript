@@ -175,3 +175,60 @@ for (let company of debTechs) {
         console.log(company);
     }
 }
+
+const arraywebTech = [];
+for (let company of debTechs) {
+    arraywebTech.push([company.toUpperCase(), company.length]);
+}
+console.log(arraywebTech);
+
+let mern = "";
+for (let company of mernStack) {
+    mern = mern + company[0].toUpperCase();
+}
+
+console.log(mern);
+
+const fruit = ['banana', 'orange', 'mango', 'lemon'];
+const fruitRev = [];
+for (let i = fruit.length - 1; i >= 0; i--) {
+    fruitRev.push(fruit[i]);
+}
+console.log(fruitRev);
+
+const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+];
+
+for (let i = 0; i < fullStack.length; i++) {
+    for (let j = 0; j < fullStack[i].length; j++) {
+        console.log(fullStack[i][j].toUpperCase());
+    }
+}
+
+const copyCountries = countries.slice(0);
+console.log(copyCountries);
+
+const sortedCountries = copyCountries.sort();
+console.log(sortedCountries);
+
+const sortedmernStack = mernStack.sort();
+console.log(sortedmernStack);
+const sortedwebTechs = debTechs.sort();
+console.log(sortedwebTechs);
+
+const landCountries = [];
+for (let country of countries) {
+    if (country.includes("land")) {
+        landCountries.push(country);
+    }
+}
+console.log(landCountries);
+
+const revCounytry = countries.reverse();
+const revCountry = []
+for (let country of revCounytry) {
+    revCountry.push(country.toUpperCase());
+}
+console.log(revCountry);
