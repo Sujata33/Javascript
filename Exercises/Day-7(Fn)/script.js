@@ -65,3 +65,23 @@ function substance(mass, volume) {
 }
 
 console.log(substance(12, 4));
+
+//10.
+function speedCal(distance, time) {
+    const speed = distance / time;
+    return speed;
+}
+console.log(speedCal(14, 2));
+//11.
+function weightFn(mass, gravity) {
+    const weight = mass * gravity;
+    return weight;
+}
+console.log(weightFn(5, 6));
+
+//12.
+function convertCelsiusToFahrenheit(oC) {
+    const oF = (oC * 9 / 5) + 32;
+    return oF;
+}
+console.log(convertCelsiusToFahrenheit(45));
