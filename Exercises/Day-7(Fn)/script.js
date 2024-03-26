@@ -85,3 +85,54 @@ function convertCelsiusToFahrenheit(oC) {
     return oF;
 }
 console.log(convertCelsiusToFahrenheit(45));
+
+//13.
+function bodyMassIndex(weight, height) {
+    const bmi = weight / (height * height);
+    if (bmi < 18.5) {
+        console.log("The person is Underweight");
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+        console.log("The person is Normal");
+    } else if (bmi >= 25 && bmi <= 29.9) {
+        console.log("The person is Overweight");
+    } else if (bmi < 30) {
+        console.log("The person is Obese");
+    }
+}
+
+bodyMassIndex(24, 12);
+
+//14.
+function checkSeason(month) {
+    if (month === "December" || month === "January" || month === "February") {
+        return "Winter";
+    } else if (month === "March" || month === "April" || month === "May") {
+        return "Spring";
+    } else if (month === "june" || month === "july" || month === "August") {
+        return "Summer";
+    }
+}
+
+console.log(checkSeason("January"));
+
+
+function findMax() {
+    let max = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        if (arguments[i] > max) {
+            max = arguments[i];
+        }
+    }
+    return max;
+}
+
+console.log(findMax(3, 5, 2));
+
+const arrayFn = [4, 6, 7, 8, 2, 34, 343];
+function printArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+}
+
+printArray(arrayFn);
