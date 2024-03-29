@@ -115,7 +115,7 @@ function checkSeason(month) {
 
 console.log(checkSeason("January"));
 
-
+//15.
 function findMax() {
     let max = 0;
     for (let i = 0; i < arguments.length; i++) {
@@ -128,6 +128,9 @@ function findMax() {
 
 console.log(findMax(3, 5, 2));
 
+//// Level 2 /////
+
+//3.
 const arrayFn = [4, 6, 7, 8, 2, 34, 343];
 function printArray(arr) {
     for (let i = 0; i < arr.length; i++) {
@@ -136,3 +139,53 @@ function printArray(arr) {
 }
 
 printArray(arrayFn);
+
+//4.
+function showDateTime() {
+    let toDay = new Date();
+    const day = toDay.getDate();
+    const month = toDay.getMonth();
+    const year = toDay.getFullYear();
+    const hr = toDay.getHours();
+    const min = toDay.getMinutes();
+    const sec = toDay.getSeconds();
+
+    function add0(z) {
+        if (z < 10) {
+            return `0${z}`;
+        }
+        return z;
+    }
+
+
+    console.log(`${add0(day)}/${add0(month)}/${year} ${add0(hr)}:${add0(min)}`);
+}
+
+showDateTime();
+
+//5.
+function swapValues(x, y) {
+    console.log(`x=${x}, y=${y}`);
+    x = x - y;
+    y = x + y;
+    x = y - x;
+    console.log(`x=${x}, y=${y}`);
+
+    // let z;
+    // z=x;
+    // x=y;
+    // y=z;
+}
+
+swapValues(6, 9);
+
+//6.
+function reverseArray(arr1) {
+    const empArray = [];
+    for (let i = arr1.length; i > 0; i--) {
+        empArray[i - 1] = arr1[arr1.length - i];
+    }
+    return empArray;
+}
+
+console.log(reverseArray([3, 2, 7, 78, 4]));
