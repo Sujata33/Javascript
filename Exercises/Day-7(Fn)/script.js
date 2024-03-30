@@ -189,3 +189,109 @@ function reverseArray(arr1) {
 }
 
 console.log(reverseArray([3, 2, 7, 78, 4]));
+
+//7.
+function capitalizeArray(arrCapital) {
+    const empArrCap = [];
+    for (let i = 0; i < arrCapital.length; i++) {
+        empArrCap[i] = arrCapital[i].toUpperCase();
+    }
+    return empArrCap;
+}
+
+console.log(capitalizeArray(["abc", "heygdh", "ami", "tumi"]));
+
+//8.
+function addItem(abc) {
+    const arrAddItem = [4, 8, "hgf", 67, "yt"];
+    arrAddItem.push(abc);
+    return arrAddItem;
+}
+console.log(addItem("sujata"));
+
+//9.
+function removeItem(index) {
+    const arrRemoveItem = [6, 8, 9, "sujata", "ghosh", 9, 24000];
+    arrRemoveItem.splice(index, 1);
+    return arrRemoveItem;
+}
+console.log(removeItem(4, 1));
+
+//10.
+function sumOfNumbers(n) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum = sum + i;
+    }
+    return sum;
+}
+console.log(sumOfNumbers(30));
+
+//11.
+function sumOfOdds(n) {
+    let sumOdd = 0;
+    for (let i = 1; i <= n; i++) {
+        if (i % 2 != 0) {
+            sumOdd = sumOdd + i;
+        }
+    }
+    return sumOdd;
+}
+console.log(sumOfOdds(30));
+
+//12.
+function sumOfEven(n) {
+    let sumEven = 0;
+    for (let i = 1; i <= n; i++) {
+        if (i % 2 == 0) {
+            sumEven = sumEven + i;
+        }
+    }
+    return sumEven;
+}
+console.log(sumOfEven(9));
+
+//prime
+function primeCheck(n) {
+    let flag = false;
+    if (n === 1) {
+        return "The number is not prime";
+    } else {
+        for (let i = 2; i <= n / 2; i++) {
+            if (n % i === 0) {
+                flag = true;
+                break;
+            }
+        }
+        if (flag !== true) {
+            return "the number is prime";
+        } else {
+            return "the number is not a prime number";
+        }
+    }
+}
+console.log(primeCheck(1));
+
+//17.
+function randomHexaNumberGenerator() {
+    const indexString = "abcdefghijklmnopqrstuvwxyz0123456789";
+    let hexaNumber = "#";
+    for (let i = 0; i < 6; i++) {
+        hexaNumber = hexaNumber + indexString[Math.floor(Math.random() * indexString.length)];
+    }
+    return hexaNumber;
+}
+const hexaNumber = randomHexaNumberGenerator();
+console.log(hexaNumber);
+
+//18.
+function userIdGenerator() {
+    const indexString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%_&0123456789";
+    let userID = "";
+    for (let i = 0; i < 7; i++) {
+        userID += indexString[Math.floor(Math.random() * indexString.length)];
+    }
+    return userID;
+}
+const id = userIdGenerator();
+console.log(id);
