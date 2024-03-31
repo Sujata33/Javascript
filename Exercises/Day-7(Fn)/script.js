@@ -295,3 +295,31 @@ function userIdGenerator() {
 }
 const id = userIdGenerator();
 console.log(id);
+
+//level 3///
+
+//1.
+function userIdGeneratedByUser(num, numOfid) {
+    const indexString = "abcdefghijklmnopqrstuvwxyz1234567890";
+    let userId = "";
+    for (let i = 0; i < numOfid; i++) {
+        console.log("\n");
+        for (let j = 0; j < num; j++) {
+            userId += indexString[Math.floor(Math.random() * indexString.length)];
+        }
+        // console.log("\n");
+    }
+    return userId;
+}
+const userid = userIdGeneratedByUser(7, 4);
+console.log(userid);
+
+//2.
+function rgbColorGenerator() {
+    const ran1 = Math.floor(Math.random() * 256);
+    const ran2 = Math.floor(Math.random() * 256);
+    const ran3 = Math.floor(Math.random() * 256);
+    return `rgb(${ran1},${ran2},${ran3})`;
+}
+
+console.log(rgbColorGenerator());
