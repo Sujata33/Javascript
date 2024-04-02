@@ -299,20 +299,22 @@ console.log(id);
 //level 3///
 
 //1.
-function userIdGeneratedByUser(num, numOfid) {
-    const indexString = "abcdefghijklmnopqrstuvwxyz1234567890";
-    let userId = "";
+function userIdGeneratedByUser() {
+    let numOfid = +prompt("Enter the number of Id");
+    let num = +prompt("Enter the number of char");
+    const indexString = "abcdefghijklmnopqrstuvwxyzBCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
     for (let i = 0; i < numOfid; i++) {
-        console.log("\n");
+        let userId = "";
+        // console.log("\n");
         for (let j = 0; j < num; j++) {
             userId += indexString[Math.floor(Math.random() * indexString.length)];
         }
         // console.log("\n");
+        console.log(userId);
     }
-    return userId;
 }
-const userid = userIdGeneratedByUser(7, 4);
-console.log(userid);
+// userIdGeneratedByUser();
+// console.log(userid);
 
 //2.
 function rgbColorGenerator() {
@@ -323,3 +325,121 @@ function rgbColorGenerator() {
 }
 
 console.log(rgbColorGenerator());
+
+//3.
+function arrayOfHexaColors(num) {
+    const hexaChars = "abcdefABCDEF1234567890";
+    const empHexaArr = [];
+    for (let i = 0; i < num; i++) {
+        let hexa = "#";
+        for (let j = 0; j < 6; j++) {
+            hexa += hexaChars[Math.floor(Math.random() * hexaChars.length)];
+        }
+        empHexaArr.push(hexa);
+    }
+    return empHexaArr;
+}
+
+console.log(arrayOfHexaColors(4));
+
+//7.
+function generateColors(type, num) {
+    const empHexaArr = [];
+    if (type === "hexa") {
+        const hexaChars = "abcdefABCDEF1234567890";
+
+        for (let i = 0; i < num; i++) {
+            let hexa = "#";
+            for (let j = 0; j < 6; j++) {
+                hexa += hexaChars[Math.floor(Math.random() * hexaChars.length)];
+            }
+            empHexaArr.push(hexa);
+        }
+        return empHexaArr;
+    }
+    if (type === "rgb") {
+        for (let i = 0; i < num; i++) {
+            const ran1 = Math.floor(Math.random() * 256);
+            const ran2 = Math.floor(Math.random() * 256);
+            const ran3 = Math.floor(Math.random() * 256);
+            const rgb = `rgb(${ran1},${ran2},${ran3})`;
+            empHexaArr.push(rgb);
+        }
+        return empHexaArr;
+    }
+}
+
+console.log(generateColors("hexa", 3));
+console.log(generateColors("rgb", 3));
+console.log(generateColors("hexa", 1));
+console.log(generateColors("rgb", 1));
+
+//9.
+function factorial(num) {
+    let fact = 1;
+    for (let i = 1; i <= num; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+console.log(`factorial of a number ${factorial(5)}`);
+
+//11.
+function sum(num) {
+    let sumNum = 0;
+    for (let i = 1; i <= num; i++) {
+        sumNum += i;
+    }
+    return sumNum;
+}
+
+console.log(`sum of a number ${sum(5)}`);
+
+//12.
+function sumOfArrayItems(sumItemArray) {
+    let sum = 0;
+    for (let i = 0; i < sumItemArray.length; i++) {
+        if (typeof (sumItemArray[i]) === "number") {
+            sum += sumItemArray[i];
+        }
+        // sum += sumItemArray[i];
+    }
+    return sum;
+}
+
+console.log(`The sum of the array item is ${sumOfArrayItems(["tumi", "ami"])}`);
+console.log(`The sum of the array item is ${sumOfArrayItems([34, 40])}`);
+// console.log(typeof (12));
+
+//13.
+function average(avgItemArray) {
+    let avg = 0;
+    let sum = 0;
+    for (let i = 0; i < avgItemArray.length; i++) {
+        if (typeof (avgItemArray[i]) === "number") {
+            sum += avgItemArray[i];
+        }
+        // sum += sumItemArray[i];
+    }
+    avg = sum / avgItemArray.length;
+    return avg;
+}
+
+console.log(`The average of the array items ${average([23, 43, 45])}`);
+
+
+
+function uniqueItem(uniqueItemArray) {
+    // let item = uniqueItemArray[0];
+    for (let i = 0; i < uniqueItemArray.length; i++) {
+        if (uniqueItemArray[1] === uniqueItemArray[i]) {
+            return `The item of the array are not unique.`;
+
+        }
+        return `Array items are unique.`;
+
+    }
+
+}
+console.log(uniqueItem(["a", 2, 2, "abc"]));
