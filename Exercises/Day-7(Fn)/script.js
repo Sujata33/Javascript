@@ -6,7 +6,7 @@
 // fullName();
 
 //2.
-function fullName(firstName, lastName) {
+/*function fullName(firstName, lastName) {
     return firstName + lastName;
 }
 
@@ -374,6 +374,16 @@ console.log(generateColors("rgb", 3));
 console.log(generateColors("hexa", 1));
 console.log(generateColors("rgb", 1));
 
+//8.
+function shuffleArray(shuffArray) {
+    for (let i = shuffArray.length - 1; i > 0; i--) {
+        let index = Math.floor(Math.random() * shuffArray.length);
+        [shuffArray[i], shuffArray[index]] = [shuffArray[index], shuffArray[i]];
+    }
+    return shuffArray;
+}
+console.log(shuffleArray([23, 45, 54, 76]));
+
 //9.
 function factorial(num) {
     let fact = 1;
@@ -443,3 +453,25 @@ function uniqueItem(uniqueItemArray) {
 
 }
 console.log(uniqueItem(["a", 2, 2, "abc"]));
+
+//3.
+function arrayOfHexaColors(n) {
+    let chars = "abcdef1234567890";
+    const hexaArray = [];
+    for (let i = 0; i < n; i++) {
+        let hexa = "#";
+        for (let j = 0; j < 6; j++) {
+            hexa += chars[Math.floor(Math.random() * chars.length)];
+
+        }
+        hexaArray.push(hexa);
+    }
+    return hexaArray;
+}
+console.log(arrayOfHexaColors(5)); */
+
+//14.
+
+// function modifyArray(){
+
+// }
