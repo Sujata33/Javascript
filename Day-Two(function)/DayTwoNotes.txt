@@ -1,0 +1,76 @@
+/*
+// Logical Operator with Conditional Operator
+if (3 === 3 && 4 > 2 || 4 < 10) {
+    console.log("True");
+} else {
+    console.log("False");
+};
+*/
+
+// Ternery Operator
+//  condition ? ifTrue : ifFalse;
+
+let score = 65;
+
+// score >= 80 ? console.log('Excellent') : console.log("Good");
+const result = score >= 70 ? "Good 👍" : score >= 60 ? "Noicee 😉" : "Bhalo";
+console.log(result);
+
+// Changing Data types:
+
+// CASTING:
+
+// Casting from String to Number:
+const numString = "23";
+const floatString = "5.96";
+console.log(typeof numString);
+
+// parseInt(value);
+console.log(typeof parseInt(numString));
+console.log(parseInt("45t98Sujata"));
+
+// Number(value);
+console.log(Number(numString));
+
+// + sign (+value);
+console.log(+numString);
+
+// String to Float;
+const floatNum = parseFloat(floatString);
+
+// Float to Int:
+const numInt = parseInt(floatNum);
+console.log(numInt);
+
+// NaN (Not a Numbe);
+// console.log("2" - 5); // type conversion
+console.log(2 / "ABC");
+console.log(Number("sujata"));
+
+/// Number Methods ////
+
+// Number.isInteger(); Returns true if the argument is integer.
+console.log(Number.isInteger(21));
+console.log(Number.isInteger(5.6));
+
+// isNaN(): Returns true if passed argument is NOT A legal number
+console.log(isNaN("Sujata"));
+console.log(isNaN(45));
+
+// parseInt(), parseFloat();
+
+// toFixed(): Formats a number using a fixed-point notation.
+// Returns a string with the specified number of decimals;
+const num = 3.42548724566;
+console.log(num.toFixed(2));
+// console.log(typeof num.toFixed(2));
+
+// toExponential();
+const num2 = 5298.2398723423;
+console.log(num2.toExponential(1));
+console.log(num2.toExponential(2));
+
+// toString(): Converts/returns a string representing the specified number.
+const num3 = 45898465;
+const toString = num3.toString();
+console.log(toString);

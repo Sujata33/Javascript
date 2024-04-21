@@ -1,0 +1,157 @@
+'use strict';
+
+/*
+const obj = {
+    key: value (string/number/array/objet/method)
+}
+*/
+
+// Object literal
+// obj = {}
+
+
+// OBJECTS ARE NOT DIRECTLY ITERABLE.
+
+const obj = {
+    firstName: "Sushovan",
+    lastName: "Ghsoh",
+    age: 23,
+};
+
+const myObj = obj;
+
+// accessing the object values
+
+// => dot operator
+// objectname.key
+console.log(obj.firstName);
+console.log(obj.age);
+const fullName = obj.firstName + ' ' + obj.lastName;
+console.log(fullName);
+
+// => square bracket operator
+// objectname['key'];
+
+const myAge = 'age';
+
+console.log(obj["firstName"]);
+console.log(obj[myAge]);
+
+// console.log(obj.wife.firstName);
+// console.log(obj['wife'].firstName);
+// console.log(obj['wife']['lastName']);
+
+// modifying data / add data / create data
+
+// objectName.key = value;
+obj.address = "Sripur";
+obj.isMarried = true;
+
+console.log(obj);
+console.log(myObj);
+
+myObj.firstName = "Sushovan Ghosh";
+
+console.log(obj);
+console.log(myObj);
+
+// shallow copy
+const copyArray = obj;
+
+obj.lastName = "khan";
+
+console.log(copyArray);
+console.log(myObj);
+
+// Object methods ////
+
+// const b = {
+//     firstName: "Ramesh",
+//     age: 40,
+// }
+
+// const c = {
+//     lastName: "Ghosh",
+// }
+
+// Object.assign(): Used to DEEP copy of an object, without modifying the orginal object.
+const assignedObj = Object.assign({}, obj);
+
+assignedObj.firstName = "Sujata";
+assignedObj.age = 24;
+
+console.log(assignedObj);
+console.log(obj);
+
+// const assignBC = Object.assign(b, c);
+// console.log(assignBC);
+
+// Object.keys(): Returns an array of all the keys of an object.
+
+const keysOfObject = Object.keys(assignedObj);
+console.log(keysOfObject);
+
+const keys = ['firstName', 'lastName', 'age', 'address', 'isMarried'];
+
+for (const item of Object.keys(assignedObj)) {
+    console.log(assignedObj[item]);
+}
+
+// Object.values(): Returns an array of all the values of an object
+const allValues = Object.values(assignedObj);
+console.log(allValues);
+
+// Object.entries(): Returns an array of properties/keys and values of the specified object.
+const entriesOfObject = Object.entries(copyObject);
+console.log(entriesOfObject);
+
+// hasOwnProperty(): checks if certain property is in a object.
+console.log(copyObject.hasOwnProperty('firstName'));
+
+// in
+console.log('firstName' in copyObject);
+
+// for...in loop: This loop is used to iterate over an object.
+for (const key in copyObject) {
+    console.log(copyObject[key]);
+}
+*/
+// this keyword: this inside an object always refers to the object itself.
+
+
+const myObj = {
+    firstName: "Sushovan",
+    lastName: "Ghosh",
+    age: 24,
+    info: function () {
+        return `Hi, my name is ${this.firstName} ${this.lastName}. I am ${this.age} years old.`
+    },
+
+    logInInfo(is) {
+        return `User ${is} ${this.isLoggedIn}`;
+    },
+    isLoggedIn: true,
+};
+
+console.log(myObj.info());
+console.log(myObj.logInInfo('Sujata'));
+
+
+
+// scope, hoisting
+
+const dog = {};
+console.log(dog);
+
+dog.name = "Bocho";
+dog.legs = 4;
+dog.age = 5;
+dog.bark = function () {
+    return 'Woof woof!';
+};
+dog.breed = 'Rotwiler';
+dog.getDogInfo = function () {
+    return `This is ${this.name}, ${this.age} years old. It is a ${this.breed}. It has ${this.legs} legs.`
+};
+
+console.log(dog.getDogInfo());

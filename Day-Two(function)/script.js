@@ -1,9 +1,9 @@
-                        //**DAY TWO With Mona**//
+//**DAY TWO With Mona**//
 
 //Logical operator with conditional statement
-if(3===3 && 4>2){
+if (3 === 3 && 4 > 2) {
     console.log("True");
-}else{
+} else {
     console.log("false");
 }
 //ternary operator
@@ -23,8 +23,8 @@ console.log(res);
 
 
 
-                    // Function With chatGpt/////
-                    
+// Function With chatGpt/////
+
 /*// Function declaration without parameters
 function greet() {
     console.log("Hello, world!");

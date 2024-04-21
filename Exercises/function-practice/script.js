@@ -315,3 +315,22 @@ function randomItemArr() {
     return empArr;
 }
 console.log(randomItemArr());
+
+//function expression
+const fnLove = function () {
+    console.log("I Love Mona");
+}
+fnLove();
+
+const expresFn = function (n) {
+    return (n * n) + 10;
+}
+console.log(expresFn(8));
+
+//arrow function and self invoking (Immedietly invoking function)
+
+const square = (n => {
+    return n * n;
+})(5);
+console.log(square);
+

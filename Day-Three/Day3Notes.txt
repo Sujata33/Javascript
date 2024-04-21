@@ -1,0 +1,50 @@
+/*
+// Booleans: True, False; Generally used for conditional testing.
+
+// Truthy Value and Falsy Value
+// Truthy Value
+const isTrue = true;
+
+if (isTrue === true) {
+    console.log('True');
+}
+
+if ('ABC') {
+    console.log('Truthy Value');
+}
+
+// Falsy Value: '', false,null, undefined, 0, +0, -0, NaN;
+let isFalse = false;
+
+if (!isFalse) {
+    console.log('Not false');
+} else {
+    console.log('false');
+}
+
+// undefined: A variable has no value assigned to it.
+let a = undefined;
+a = 23;
+console.log(a);
+
+// null: The variable has no value or it is completely empty.
+let fruit = null;
+const apple = null;
+console.log(fruit === apple);
+
+// Window methods ////////
+console.log(window);
+
+// pompt() method always returns a string.
+// const myName = window.prompt('Enter a name: ');
+const myName = prompt('Enter a name: ');
+console.log(myName);
+
+// confirm() mehod always returns a boolean
+const isTrue = confirm('Type yes');
+console.log(isTrue);
+
+// 
+
+
+*/
