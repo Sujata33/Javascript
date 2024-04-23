@@ -90,6 +90,7 @@ const users = {
 }
 
 
+/*
 // console.log(users['Alex'].age);
 
 //2.
@@ -118,6 +119,8 @@ for (const item of valueUsers) {
     }
 }
 console.log(countLogin);
+
+//1.
 let max = 0;
 let maxSkilledUser = "";
 for (const item of keysUsers) {
@@ -128,3 +131,42 @@ for (const item of keysUsers) {
 }
 
 console.log(`${maxSkilledUser},${max}`);
+//3.
+let keysUsers = Object.keys(users);
+let mernDeveloper = [];
+for (const user of keysUsers) {
+    const skillsArray = users[user].skills;
+    if (skillsArray.includes("MongoDB") && skillsArray.includes("Express")) {
+        mernDeveloper.push(user);
+    }
+    // for (const skill of skillsArray) {
+    //     if (skill === "MongoDB") {
+    //         mernDeveloper.push(user);
+    //     }
+    // }
+}
+console.log(mernDeveloper);
+
+// const aktaFn = (a, arr) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === a) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+// console.log(aktaFn("suju", ["s", 3, 4, "suju"]));
+
+*/
+
+const copyUsers = Object.assign({}, users);//Deep Copy
+
+copyUsers.Sujata = {
+    email: "suju@gmail.com",
+    skills: ["HTML", "CSS", "DotNetCore", "JS"],
+    age: 23,
+    isLoggedIn: false,
+    points: 100
+}
+console.log(copyUsers);
+console.log(users);
