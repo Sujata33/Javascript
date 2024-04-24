@@ -157,7 +157,6 @@ console.log(mernDeveloper);
 // }
 // console.log(aktaFn("suju", ["s", 3, 4, "suju"]));
 
-*/
 
 const copyUsers = Object.assign({}, users);//Deep Copy
 
@@ -170,3 +169,30 @@ copyUsers.Sujata = {
 }
 console.log(copyUsers);
 console.log(users);
+
+//5.
+const keysOfUsers = Object.keys(users);
+console.log(keysOfUsers);
+
+//6.
+const valuesOfUsers = Object.values(users);
+console.log(valuesOfUsers);
+
+//7.
+const valuesOfCountries = Object.values(countries);
+console.log(valuesOfCountries);
+
+for (const item of valuesOfCountries) {
+    // console.log(item);
+    let name = item['name'];
+    
+    console.log(name);
+}
+
+*/
+
+const arr = ["a", "b", "c"];
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
