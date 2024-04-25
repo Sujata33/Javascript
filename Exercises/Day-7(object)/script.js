@@ -189,10 +189,51 @@ for (const item of valuesOfCountries) {
     console.log(name);
 }
 
-*/
 
 const arr = ["a", "b", "c"];
 
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
+const str = arr.join(", ");
+console.log(str);
+*/
+
+//level 3//
+//1.
+const personAccount = {
+    firstName: "Sujata",
+    lastName: "Ghosh",
+    incomes: {
+        salary: 30000,
+        tuitionFees: 2000
+    },
+    expenses: {
+        roomRent: 4500,
+        electricBill: 600,
+        marketBill: 1000
+    },
+    totalIncome: function () {
+        let sumIncome = 0;
+        for (let item of Object.values(this.incomes)) {
+            sumIncome += item;
+        }
+        return sumIncome;
+    },
+    totalExpense: function () {
+
+        let sumExpense = 0;
+        for (let expense of Object.values(this.expenses)) {
+            sumExpense += expense;
+        }
+        return sumExpense;
+    },
+    accountBalance: function () {
+        return this.totalIncome() - this.totalExpense();
+    },
+    addIncome: function (type, amount) {
+        this.incomes[type] = amount;
+    },
+    addExpense: function (typeExpense, expenseAmount) {
+        this.expenses[typeExpense] = expenseAmount;
+    }
+};
+personAccount.addExpense("Mona", 1000);
+console.log(personAccount.expenses);
