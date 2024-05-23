@@ -20,7 +20,9 @@ let scor = 70;
 const res = scor >= 80 ? "Excellent 👍" : scor > 70 ? "Good 😢" : "Sorry 😃";
 console.log(res);
 
-
+const num3 = 45898465;
+const toString = num3.toString();
+console.log(typeof toString);
 
 
 // Function With chatGpt/////
