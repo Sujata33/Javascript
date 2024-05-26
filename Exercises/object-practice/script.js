@@ -256,6 +256,7 @@ const products = [
 ]
 
 //2.
+//a.
 function signUp(newUser, newEmail, password) {
 
     const idString = "abcdefghijklmnopqrstuvwxyz1234567890";
@@ -272,7 +273,11 @@ function signUp(newUser, newEmail, password) {
     let hr = date.getHours() < 9 ? `0${date.getHours()}` : date.getHours();
     let min = date.getMinutes() < 9 ? `0${date.getMinutes()}` : date.getMinutes();
     // let sec = date.getSeconds()< 9 ? `0${date.getSeconds()}` : date.getSeconds();
-    let createdAt = `${day}/${month}/${year} ${hr}:${min}`;
+    let amPm = "AM";
+    if (hr > 12 && hr <= 23) {
+        amPm = "PM";
+    }
+    let createdAt = `${day}/${month}/${year} ${hr}:${min} ${amPm}`;
 
     for (const user of users) {
 
@@ -297,3 +302,49 @@ signUp("sujata", "suju@dd.com", "11111");
 // console.log(signUp());
 
 console.log(users);
+
+//b.
+function signIn(userName, passWord) {
+    for (const user of users) {
+        if (user.username === userName && user.password === passWord) {
+            user.isLoggedIn = true;
+            return "You are successfully logged in";
+        }
+
+    }
+    return "Invalid User Name or Password please try again";
+}
+
+console.log(signIn("sujata", "11111"));
+// signIn("sujata", "11111");
+console.log(users);
+//3.
+function rateProduct(proIndex, rating) {
+    const rateIndex = "abcdefghijklmnopqrstuvwxyz1234567890";
+    let userId = "";
+    for (let i = 0; i < 6; i++) {
+        const ranId = Math.floor(Math.random() * rateIndex.length);
+        userId += rateIndex[ranId];
+    }
+
+    products[proIndex].ratings.push({
+        userId,
+        rate: rating
+    });
+
+
+    console.log(userId);
+}
+rateProduct(1, 5.6);
+console.log(products);
+
+function averageRating(proIndex) {
+    let sumRate = 0, avgRate = 0;
+
+    for (const rateObj of products[proIndex].ratings) {
+        sumRate += rateObj.rate;
+    }
+    avgRate = sumRate / products[proIndex].ratings.length;
+    return `Avarage of ratings is ${avgRate}`;
+}
+console.log(averageRating(0));
