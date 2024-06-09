@@ -348,3 +348,21 @@ function averageRating(proIndex) {
     return `Avarage of ratings is ${avgRate}`;
 }
 console.log(averageRating(0));
+
+function likeProduct(userId, productNo) {
+    const currentProduct = products[productNo - 1];
+    // console.log(currentProduct.likes);
+    const likeIndex = currentProduct.likes.indexOf(userId);
+    // console.log(likeIndex);
+    if (likeIndex === -1) {
+        currentProduct.likes.push(userId);
+    }
+    else {
+        currentProduct.likes.splice(likeIndex, 1);
+    }
+    console.log(currentProduct);
+}
+likeProduct("hedfcg", 2);
+// likeProduct("fg12cy", 2);
+// likeProduct("hedfcg", 2);
+console.log(products);
