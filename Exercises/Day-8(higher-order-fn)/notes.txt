@@ -1,0 +1,161 @@
+// Higher order function is a function that takes other function as an argument or can return another function
+
+function add(a, b) {
+    return a + b;
+};
+
+// higher order function
+function addTwo(num, fun) {
+    return fun(num, 2);
+};
+
+console.log(addTwo(5, add));
+const result = addTwo(10, function (a, b) {
+    return a + b;
+});
+console.log(result);
+
+
+const resultArrow = addTwo(20, (a, b) => a + b);
+console.log(resultArrow);
+
+const callback = n => Math.pow(n, 2);
+
+function calcCube(num, square) {
+    return square(num) * num;
+};
+
+console.log(calcCube(5, callback));
+console.log(calcCube(125, n => n ** 2));
+console.log(calcCube(1953125, function (n) {
+    return n ** 2;
+}));
+
+function higherOrderFn(n) {
+    const doSomething = m => {
+        const doWhatEver = p => {
+            return n + m + p;
+        }
+        return doWhatEver;
+    }
+    return doSomething;
+};
+
+console.log(higherOrderFn(10)(20)(30));
+
+const addTwenty = higherOrderFn(20);
+const addAnotherTen = addTwenty(10);
+const addAnotherThirty = addAnotherTen(30);
+console.log(addAnotherThirty);
+
+const arr = [1, 2, 3];
+
+let sum = 0;
+for (const item of arr) {
+    sum += item;
+};
+console.log(sum);
+
+// let sumItem = 0
+// const sumArray = function (item) {
+//     sumItem += item;
+//     console.log(sumItem);
+// };
+
+// arr.forEach(sumArray);
+
+arr.forEach(item => console.log(item));
+
+// setTimeout
+
+// syntax => setTimeout(callback, ms);
+/*
+function timeout() {
+    console.log("2 seconds have passed. 😁");
+    hidden
+
+
+};
+
+setTimeout(timeout, 5000);
+
+setTimeout(() => {
+    console.log("Timeout of 1 second.");
+}, 1000);
+
+// setInterval();
+
+let a = 1
+const timeInterval = setInterval(() => {
+    console.log(++a + ' time');
+    
+    if (a === 10) clearInterval(timeInterval);
+    }, 2000);
+    
+    // forEach: used to loop over an array. It takes a  callback function as parameter. And that callback function takes three parameter (item, index, array) , one is mandatory and other two is optional.
+
+    const arr = [87, 2983, 2736, 20385];
+    
+    arr.forEach((item, i, arr) => {
+        console.log(`${i + 1}. ${item}`);
+        console.log(arr);
+        });
+        
+        
+        // map(): Same as forEach, but returns a new array and doesn't modifies the original array.
+        
+        const arr = [87, 2983, 2736, 20385];
+        // arr.map(item => console.log(item));
+        const doubleArray = arr.map(num => num * 2);
+        console.log(doubleArray);
+        console.log(arr);
+        
+        const halfArray = arr.map((num, i, arr) => num / 2);
+        
+        const countries = ['India', 'Finland', 'Bangladesh', 'Iran'];
+        
+        // ['INDIA', 'FINLAND', .....]
+        
+        // India
+        // Finland
+        
+        const upperArray = countries.map(country => country.toUpperCase());
+        
+        console.log(upperArray);
+        
+        countries.forEach(country => console.log(country));
+        */
+const countries = ['India', 'Afganishtan', 'USA', 'Japan', 'Malayasya', 'Sri Lanka', 'Ireland', 'I'];
+
+// filter: used to filter items which fulfill the filtering condition and returns a new array.
+const filteredCountries = countries.filter((val, i, arr) => val.length < 7);
+console.log(filteredCountries);
+
+
+const students = [
+    { roll: 1, score: 70 },
+    { roll: 2, score: 72 },
+    { roll: 3, score: 20 },
+    { roll: 4, score: 54 },
+    { roll: 5, score: 68 },
+    { roll: 6, score: 38 },
+];
+
+const scoreLessFifty = students.filter(student => student.score <= 50);
+
+console.log(scoreLessFifty);
+
+// find: retrurns the first element which satisfy the condition. An array method;
+
+const findIndia = countries.find(country => country === 'India');
+
+console.log(findIndia);
+
+const num = [24, 23, 22, 89, 3, 18];
+
+const findT = num.find(n => n < 20);
+console.log(findT);
+
+
+// reduce: used to reduce an entire array to a accumulated value.
+

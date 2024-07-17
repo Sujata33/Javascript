@@ -1,0 +1,116 @@
+const countries = ['India', 'Afganishtan', 'USA', 'Japan', 'Malayasya', 'Sri Lanka', 'Ireland', 'I'];
+
+// filter: used to filter items which fulfill the filtering condition and returns a new array.
+// const filteredCountries = countries.filter((val, i, arr) => val.length < 7);
+// console.log(filteredCountries);
+
+
+const students = [
+    { roll: 1, score: 70 },
+    { roll: 2, score: 72 },
+    { roll: 3, score: 20 },
+    { roll: 4, score: 54 },
+    { roll: 5, score: 68 },
+    { roll: 6, score: 38 },
+    { roll: 6, score: 390 },
+    { roll: 6, score: 110 },
+];
+
+const sortedArray = students.sort((a, b) => a.score - b.score);
+console.log(sortedArray);
+
+const totalScore = students.reduce((acc, cur) => acc + cur.score, 0);
+console.log(totalScore);
+
+const scoreLessFifty = students.filter(student => student.score <= 50);
+
+// console.log(scoreLessFifty);
+
+// find: retrurns the first element which satisfy the condition. An array method;
+
+const findIndia = countries.find(country => country.includes('SA'));
+
+// console.log(findIndia);
+
+const num = [24, 23, 22, 89, 3, 18];
+
+const findT = num.find(n => n < 20);
+// console.log(findT);
+
+
+const index = countries.findIndex(country => country.includes('SA'));
+const indexIr = countries.findIndex(c => c === 'Ireland');
+// console.log(index);
+// console.log(indexIr);
+
+
+// reduce: used to reduce an entire array to a accumulated value. takes two parameter-one callback function and an initial value;
+
+// array.reduce((accumulator, current) => {accumulator + current}, initialValue);
+
+// 0, 0 + 24 = accumulator, 24 + 23 = accumulator, current = 22, accumulator= 24 + 23 + 22;
+
+const numArray = [1, 2, 3, 4, 5];
+
+const sumOfArray = numArray.reduce((acc, cur) => cur + acc, 0);
+const multiplyArray = numArray.reduce((acc, cur) => acc * cur, 1);
+
+// loop-1 => acc = 0, cur = 1 ===> 1 + 0 = acc;
+// loop-2 => acc = 1, cur = 2 ===> 1 + 2 = acc;
+// loop-3 => acc = 3, cur = 3 ===> 3 + 3 = acc;
+
+// console.log("Addition", sumOfArray);
+// console.log("Multiplication", multiplyArray);
+
+
+// every: checks if ALL the array item is satisfying the condition and returns a boolean; takes a callback function as parameter.
+
+const isNumArray = numArray.every(num => typeof num === 'number');
+// console.log(isNumArray); // true
+
+// some: checks if some or any one of the item is mathing with the condition given and returns a boolean. takes a callback functin as parameter.
+
+const mixAray = [1, 2, "Sujata", false, "abc"];
+
+const isSomeNumber = mixAray.some(item => typeof item === 'number');
+// console.log(isSomeNumber);
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// sort array method sorts array based on ASCII value;
+
+// const sortedMovement = movements.sort();
+// console.log(sortedMovement);
+// console.log(countries.sort());
+
+// sort higher order method sorts element based on the condition; takes a callback function as a parameter.
+
+// const sortedMovements = movements.sort((a, b) => {
+//     /*
+//     // ASSCENDING ORDER
+//     // if returns a negative value, then keeps the same order
+//     if (a < b) return -1;
+
+//     // if returns a positive value, then switch the order
+//     if (a > b) return 1;
+
+//     return 0;
+
+
+//     // DESCENDING ORDER
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//     return 0;
+//     */
+
+// });
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// asscending
+const sortedMovements = movements.sort((a, b) => a - b);
+
+// descending
+// const sortedMovements = movements.sort((a, b) => b-a);
+
+
+// console.log(sortedMovements);
