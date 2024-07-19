@@ -58,3 +58,40 @@ console.log(sixlenCountries);
 //13.
 const sixandMoreLenCountries = countries.filter(country => country.length >= 6);
 console.log(sixandMoreLenCountries);
+
+//14.
+const startwithCountries = countries.filter(country => country.startsWith('E'));
+console.log(startwithCountries);
+
+//15.
+const pricesofProducts = products.filter(prod => prod.price.valueOf);
+console.log(pricesofProducts);
+
+//16.
+const sumNumbers = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log(sumNumbers);
+
+//17.
+const concatCountries = countries.reduce((acc, curr) => `${acc + curr}, `, "Estonia, ");
+console.log(`${concatCountries} are north European countries.`);
+
+//23.
+const findCountries = countries.find(country => country.length == 6);
+console.log(findCountries);
+
+//24.
+const findIndexCountries = countries.findIndex(country => country.length == 6);
+console.log(findIndexCountries);
+
+//25.
+const posCountries = countries.findIndex(country => country.includes("Norway"));
+console.log(posCountries);
+
+//26.
+const positionCountries = countries.findIndex(country => country.includes("Russia"));
+console.log(positionCountries);
+
+//level-2
+//2.
+const totalPrice = products.reduce((acc, curr) => acc + curr.price, 0);
+console.log(totalPrice);
