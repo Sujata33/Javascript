@@ -68,12 +68,25 @@ const pricesofProducts = products.filter(prod => prod.price.valueOf);
 console.log(pricesofProducts);
 
 //16.
+function getStringLists(arr) {
+    const stringsOnly = arr.filter(item => typeof item === "string");
+    return stringsOnly;
+}
+console.log(getStringLists(["sujata", 23, "ghosh"]));
+
+//17.
 const sumNumbers = numbers.reduce((acc, curr) => acc + curr, 0);
 console.log(sumNumbers);
 
-//17.
-const concatCountries = countries.reduce((acc, curr) => `${acc + curr}, `, "Estonia, ");
-console.log(`${concatCountries} are north European countries.`);
+//18.
+const concatCountries = countries.reduce((acc, curr) => {
+    if (curr == "IceLand") {
+        return acc + " and " + curr + " are north European countries.";
+    } else {
+        return acc + ", " + curr;
+    }
+}, "Estonia");
+console.log(concatCountries);
 
 //23.
 const findCountries = countries.find(country => country.length == 6);
